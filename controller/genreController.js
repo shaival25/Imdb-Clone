@@ -22,11 +22,11 @@ exports.addGenre = (req, res) => {
 }
 
 exports.getGenre = (genre) => {
-    genreModel.findOne({ name: genre }).then((success, err) => {
+    genreModel.findOne({ name: genre }, '_id').then((success, err) => {
         if (err) {
             return false;
         } else {
-            console.log(success.name)
+            console.log(success._id)
             return success._id
         }
     })
