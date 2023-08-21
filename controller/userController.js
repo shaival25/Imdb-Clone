@@ -4,7 +4,7 @@ const couterModel = require("../models/counter-model")
 exports.addUser = (req, res) => {
     let user = new userModel(req.body)
     console.log(user)
-    couterModel.findOneAndUpdate({ type: "Userseq" }, { $inc: { "seq": 1 } }, { new: true }).then((success, err) => {
+    couterModel.findOneAndUpdate({ type: "UserSeq" }, { $inc: { "seq": 1 } }, { new: true }).then((success, err) => {
         if (err) {
             res.json({
                 status: -1,
