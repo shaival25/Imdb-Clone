@@ -20,3 +20,13 @@ exports.addGenre = (req, res) => {
         }
     })
 }
+
+exports.getGenre = (genre) => {
+    genreModel.findOne({ name: genre }).then((success, err) => {
+        if (err) {
+            return false;
+        } else {
+            return success._id
+        }
+    })
+}
