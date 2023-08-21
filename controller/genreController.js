@@ -26,6 +26,7 @@ exports.getGenre = (genre) => {
         if (err) {
             return false;
         } else {
+            console.log(success._id)
             return success._id
         }
     })
