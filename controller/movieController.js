@@ -30,12 +30,4 @@ exports.addMovie = (req, res) => {
             }
         })
     }
-    genreModel.findOne({ name: movie.genre }).then((success, err) => {
-        if (err) {
-
-        } else {
-            console.log(success)
-
-        }
-    })
 }
