@@ -9,10 +9,11 @@ const app = express()
 const PORT = process.env.PORT || 4000
 
 //middleware
-app.use(router)
+
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(router)
 
 mongoose.set('strictQuery', false);
 const connectDB = async() => {
