@@ -1,4 +1,5 @@
 const userModel = require("../models/user-model")
+const reviewModel = require("../models/review-model")
 const couterModel = require("../models/counter-model")
 
 exports.addUser = (req, res) => {
@@ -32,6 +33,25 @@ exports.addUser = (req, res) => {
                         data: success
                     })
                 }
+            })
+        }
+    })
+}
+
+exports.addReview = (req, res) => {
+    let review = new reviewModel(req.body)
+    review.save().then((success, err) => {
+        if (err) {
+            res.json({
+                status: -1,
+                msg: "SMW",
+                data: "Please Try After Sometime 2"
+            })
+        } else {
+            res.json({
+                status: 200,
+                msg: "Review Added!!",
+                data: success
             })
         }
     })
