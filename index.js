@@ -6,7 +6,7 @@ const cors = require("cors")
 const router = require("./routes")
 
 const app = express()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000
 
 //middleware
 app.use(router)

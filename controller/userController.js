@@ -12,6 +12,7 @@ exports.addUser = (req, res) => {
                 data: "Please Try After Sometime 1"
             })
         } else {
+            console.log(success.seq)
             id = success.seq
             user.id = id
             console.log(user)
