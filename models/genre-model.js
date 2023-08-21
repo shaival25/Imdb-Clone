@@ -8,6 +8,4 @@ const genreSchema = mongoose.Schema({
     }
 });
 
-const genreModel = mongoose.model('genre', userSchema);
-
-module.exports = genreSchema;
+module.exports = mongoose.model('genre', genreSchema);
